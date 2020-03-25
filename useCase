@@ -1,0 +1,31 @@
+
+Use Case 1.
+
+Opret ordre:
+
+Primary actors:     Alfonso
+                    Customer
+
+Preconditioning:    Dell-Laptop is functional
+                    Phone is working
+
+Basic flow of events:
+1.  Customer makes an order of Pizza(s) from the menu.
+2.  Customer adds a pickup time to the order.
+3.  Order and pickup time is registered in the system.
+4.  Confirmation: Customer receives an order ID og price of total order.
+
+
+Alternative flows:
+1.  Pizza is not available.
+    1.a.    System prompt: Pizza is not available, pls chose an alternative.
+2.  Pickup time is set to before/earlier than the time of the order
+    2.a.    System prompt: Pls set pickup time to now + 20min.
+4.  Customer change or cancel the order
+    4.a.    Order is cancelled/amended, back to step 1.
+
+
+
+
+
+
