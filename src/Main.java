@@ -14,6 +14,15 @@ public class Main {
      Ordre ordre=new Ordre();
      IO.indlaesOrdre(ordre,menuKort);
      ordre.visOrdre();
+      ordre=new Ordre();
+        IO.indlaesOrdre(ordre,menuKort);
+        ordre.visOrdre();
+
+        OrdreBog ordrebog=new OrdreBog();
+        ordre.tilFøjOrdre(ordrebog);
+        System.out.println(ordrebog);
+        ordrebog.afslutOrdre(ordre);
+        System.out.println(ordrebog);
 
     }
 }

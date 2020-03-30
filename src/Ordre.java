@@ -1,10 +1,11 @@
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Ordre {
     static int ordreCounter = 1;
     ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
-    Time afhentningsTidspunkt;
+    LocalTime afhentningsTidspunkt;
     int ordreId;
     int samletPris = 0;
 
@@ -18,13 +19,16 @@ public class Ordre {
         samletPris = samletPris + pizza.getPris();
     }
 
-    public void tilføjKlokkeSlet(Time time) {
+    public void tilføjKlokkeSlet(LocalTime time) {
         afhentningsTidspunkt = time;
     }
+    public void tilFøjOrdre(OrdreBog ordreBog){
+        ordreBog.ordreListe.add(this);
 
+    }
 
     public void visOrdre() {
-        System.out.println("ordrenummer: " + this.ordreId);
+        System.out.println("ordrenummer: " + this.ordreId+"  Klokken:"+this.afhentningsTidspunkt+" pris:"+this.samletPris);
         for (Pizza pizza : this.pizzaer) {
             System.out.println(pizza);
         }
