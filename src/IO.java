@@ -1,3 +1,5 @@
+import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class IO {
@@ -14,6 +16,11 @@ public class IO {
             valg = ordreInput.nextInt();
         }
         System.out.println("Vælg afhentningtidspunkt: ");
+        String timeString;
+        timeString=ordreInput.nextLine();
+        timeString=ordreInput.nextLine();
+        ordre.tilføjKlokkeSlet(LocalTime.parse(timeString));
+
 
 
 
