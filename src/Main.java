@@ -5,8 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Menukort x = new Menukort();
-        x.indlæsMenukort();
+        Menukort menuKort = new Menukort();
+        menuKort.indlæsMenukort();
+     /*   System.out.println(x);
+        Pizza p=new Pizza();
+        p.findIMenu(x,2);
+        System.out.println(p);*/
+     Ordre ordre=new Ordre();
+     IO.indlaesOrdre(ordre,menuKort);
+     ordre.visOrdre();
 
     }
 }

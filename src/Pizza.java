@@ -1,3 +1,5 @@
+
+
 public class Pizza {
 
     int nr;
@@ -14,7 +16,8 @@ public class Pizza {
         this.ingredienser = ingredienser;
         this.pris = pris;
     }
-
+    public Pizza() {
+           }
     public int getNr() {
 
         return nr;
@@ -46,6 +49,17 @@ public class Pizza {
     public int getPris() {
 
         return pris;
+    }
+    public void findIMenu(Menukort menu, int nr){
+        for(Pizza pizza:menu.pizzaList){
+                if(pizza.getNr()==nr) {
+                    this.navn=pizza.getNavn();
+                    this.nr=pizza.getNr();
+                    this.ingredienser=pizza.getIngredienser();
+                    this.pris=pizza.getPris();
+            };
+        }
+
     }
 
     public void setPris(int pris) {
