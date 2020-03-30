@@ -10,87 +10,87 @@ public class Menukort {
     public void indlæsMenukort() {
 
         Pizza pizza1 = new Pizza(1,
-                "Margaritha",
-                "Tomatsauce & Ost",
-                50);
+                "Vesuvio",
+                "Tomatsauce, ost, skinke og oregano",
+                57);
         pizzaList.add(pizza1);
 
         Pizza pizza2 = new Pizza(2,
-                "Carpri",
-                "Tomatsauce, Ost & Ged",
-                60);
+                "Amerikaner",
+                "Tomatsauce, ost, oksefars og oregano",
+                53);
         pizzaList.add(pizza2);
 
         Pizza pizza3 = new Pizza(3,
-                "Cacciattio",
+                "Cacciatore",
                 "Tomatsauce, ost, peperoni, origano",
-                70);
+                57);
         pizzaList.add(pizza3);
 
         Pizza pizza4 = new Pizza(4,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                80);
+                "Carbona",
+                "Tomatsauce, ost, kødsauce, spaghetti, cocktailpølser og oregano",
+                63);
         pizzaList.add(pizza4);
 
         Pizza pizza5 = new Pizza(5,
-                "Margaritha",
-                "Tomast & Ost",
-                90);
+                "Dennis",
+                "Tomatsauce, ost, skinke pepperoni, cocktailpølser og oregano",
+                65);
         pizzaList.add(pizza5);
 
         Pizza pizza6 = new Pizza(6,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                30);
+                "Bertil",
+                "Tomatsauce, ost, bacon og oregano",
+                57);
         pizzaList.add(pizza6);
 
         Pizza pizza7 = new Pizza(7,
-                "Margaritha",
-                "Tomast & Ost",
-                55);
+                "Silvia",
+                "Tomatsauce, ost, pepproni, rød peber, løg, oliven og oregano",
+                61);
         pizzaList.add(pizza7);
 
         Pizza pizza8 = new Pizza(8,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                65);
+                "Victoria",
+                "Tomatsauce, ost, skinke, ananas, champignon, løg og oregano",
+                61);
         pizzaList.add(pizza8);
 
         Pizza pizza9 = new Pizza(9,
-                "Margaritha",
-                "Tomast & Ost",
-                78);
+                "Toronfo",
+                "Tomatsauce, ost, skinke, bacon, kebab, chili og oregano",
+                61);
         pizzaList.add(pizza9);
 
         Pizza pizza10 = new Pizza(10,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                72);
+                "Capricciosa",
+                "Tomatsauce, ost, skinke, champignon og oregano",
+                61);
         pizzaList.add(pizza10);
 
         Pizza pizza11 = new Pizza(11,
-                "Margaritha",
-                "Tomast & Ost",
-                92);
+                "Hawaii",
+                "Tomatsauce, ost, skinke, ananas og oregano",
+                61);
         pizzaList.add(pizza11);
 
         Pizza pizza12 = new Pizza(12,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                69);
+                "Le Blissola",
+                "Tomatsauce, ost, skinke, rejer og oregano",
+                61);
         pizzaList.add(pizza12);
 
         Pizza pizza13 = new Pizza(13,
-                "Margaritha",
-                "Tomast & Ost",
-                72);
+                "Venezia",
+                "Tomatsauce, ost, skinke, bacon og oregano",
+                61);
         pizzaList.add(pizza13);
 
         Pizza pizza14 = new Pizza(14,
-                "Carpri",
-                "Tomast, Ost & Ged",
-                64);
+                "Mafia",
+                "Tomatsauce, ost, pepperoni, bacon, løg og oregano",
+                61);
         pizzaList.add(pizza14);
 
         System.out.println(pizzaList);
