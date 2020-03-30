@@ -2,7 +2,7 @@
 Mario's Pizzabar
 
 Mandag 30.03.20.
-Staus:
+Status: \n
 Oprettet 
 1. Pizza
 2. Menukort
