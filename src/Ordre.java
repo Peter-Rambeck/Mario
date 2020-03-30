@@ -3,6 +3,14 @@ import java.util.ArrayList;
 
 public class Ordre {
 
+
+}
+
+
+/*
+
+
+
     static int ordreCounter = 1;
     ArrayList<Pizza> pizzaer;
     Time afhentningsTidspunkt;
@@ -20,25 +28,25 @@ public class Ordre {
 
         }
 
-    /*
+
  visOrdrePris skal udregne ordre prisen
-*/
-    public void setPris() {
-        int tmpPris = 0;
-        // TODO: Calculate orderprice
-        // tmpPris = pizza.getPris();
-        // tmpPris =
-    }
+
+public void setPris() {
+    int tmpPris = 0;
+    // TODO: Calculate orderprice
+    // tmpPris = pizza.getPris();
+    // tmpPris =
+}
 
     public int visOrdrePris() {
         int pris = 0;
         return pris;
     }
 
-    /*
+
   visOrdre skal udskrive den fulde ordre: getPizzaer + afhentningsTidspunkt + pris
-   */
+
     public void visOrdre() {
     }
 
-}
+ */

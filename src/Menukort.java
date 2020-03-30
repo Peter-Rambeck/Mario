@@ -2,6 +2,11 @@ import java.util.ArrayList;
 
 public class Menukort {
 
+
+}
+
+
+    /*
     static ArrayList<Pizza> pizzaList;
 
     public Menukort(ArrayList<Pizza> pizzaList) {
@@ -23,13 +28,5 @@ public class Menukort {
         for (Pizza pizza: pizzaList) {
             str = str + pizza + "\n";
         }
-        return str;
-    }
-    /*
+        return str;     */
 
-        return "Menukort{" +
-                "pizzaList=" + pizzaList +
-                '}';
-
-     */
-}

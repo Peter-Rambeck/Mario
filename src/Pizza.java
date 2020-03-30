@@ -16,6 +16,7 @@ public class Pizza {
     }
 
     public int getNr() {
+
         return nr;
     }
 
@@ -24,6 +25,7 @@ public class Pizza {
     }
 
     public String getNavn() {
+
         return navn;
     }
 
@@ -32,18 +34,22 @@ public class Pizza {
     }
 
     public String getIngredienser() {
+
         return ingredienser;
     }
 
     public void setIngredienser(String ingredienser) {
+
         this.ingredienser = ingredienser;
     }
 
     public int getPris() {
+
         return pris;
     }
 
     public void setPris(int pris) {
+
         this.pris = pris;
     }
 

@@ -3,8 +3,22 @@ import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) {
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+/*
+
 
         Pizza pizza1 = new Pizza(1,
                 "Margaritha",
@@ -28,5 +42,4 @@ public class Main {
         View view = new View();
         view.getPizzaer();
 
-    }
-}
+ */
