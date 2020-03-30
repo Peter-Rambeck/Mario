@@ -12,7 +12,7 @@ Oprettet
 
 TODO:  
 1. Skrive til fil : Peter
-2. Kommentar : Peter
+2. Kommentar : Peter ( - Menukort & Ordrebog )
 3. Opdatere menukort : Gustav
 4. Vis ordrebog : Jens
 
