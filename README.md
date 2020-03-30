@@ -6,7 +6,7 @@ Status:
 Oprettet   
 1. Pizza
 2. Menukort
-3. Ordredialog I/O
+3. I/O Ordredialog
 4. Ordre
 5. Ordrebog
 
