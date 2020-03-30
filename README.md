@@ -3,7 +3,6 @@ Mario's Pizzabar
 
 Mandag 30.03.20.  
 Status:  
-  
 Oprettet   
 1. Pizza
 2. Menukort
