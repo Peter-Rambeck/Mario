@@ -14,10 +14,12 @@ TODO:
 1. Skrive til fil : Peter
 2. Kommentar : Peter
 3. Opdatere menukort : Gustav
+4. Vis ordrebog : Jens
 
 Tirsdag:  
 1. I/O afslut ordre
-2. Sorter ordrebog /nr.
-3. Test. Junit
+2. I/O valg mellem opret/afslut ordre
+3. Sorter ordrebog /nr.
+4. Test. Junit
 
 
