@@ -20,7 +20,7 @@ Tirsdag:
 1. I/O afslut ordre
 2. I/O valg mellem opret/afslut ordre
 3. Sorter ordrebog /nr.
-4. Try/Catch på I/O 
+4. I/O Try/Catch
 5. Test. Junit
 
 
