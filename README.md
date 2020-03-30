@@ -3,6 +3,7 @@ Mario's Pizzabar
 
 Mandag 30.03.20.  
 Status:  
+  
 Oprettet   
 1. Pizza
 2. Menukort
@@ -18,5 +19,6 @@ TODO:
 Tirsdag:  
 1. I/O afslut ordre
 2. Sorter ordrebog /nr.
+3. Test. Junit
 
 
