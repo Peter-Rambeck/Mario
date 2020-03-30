@@ -17,9 +17,16 @@ public class OrdreBog {
 
     @Override
     public String toString() {
-        return "OrdreBog{" +
-                "ordreListe=" + ordreListe +
-                ", dagensOmsætning=" + dagensOmsætning +
-                '}';
+        String retString="OrdreBog\n";
+
+        for(Ordre ordre:this.ordreListe){
+            retString=retString+"Odrenr: "+ordre.ordreId+" Klokken: "+ordre.afhentningsTidspunkt+" Pizzaer: ";
+            for(Pizza pizza:ordre.pizzaer){
+                retString=(retString+pizza.getNr()+", ");
+            }
+            retString=(retString+" pris: "+ordre.samletPris+"\n");
+
+        }
+        return retString;
     }
 }
