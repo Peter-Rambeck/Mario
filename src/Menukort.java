@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Menukort {
 
-    public ArrayList<Pizza> pizzaList = new ArrayList<Pizza>();
+    public static ArrayList<Pizza> pizzaList = new ArrayList<Pizza>();
 
     public Menukort() {
     }
@@ -93,7 +93,7 @@ public class Menukort {
                 64);
         pizzaList.add(pizza14);
 
-//        System.out.println(pizzaList);
+        System.out.println(pizzaList);
 
     }
 

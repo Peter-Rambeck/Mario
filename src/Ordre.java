@@ -3,17 +3,20 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Ordre {
+
     static int ordreCounter = 1;
-    ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
+    static ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
     LocalTime afhentningsTidspunkt;
     int ordreId;
     int samletPris = 0;
 
+    // Constructor
     public Ordre() {
         ordreId = ordreCounter;
         ordreCounter++;
     }
 
+    // Add Pizza order to ArrayList + sum the price variable
     public void tilføjPizza(Pizza pizza) {
         pizzaer.add(pizza);
         samletPris = samletPris + pizza.getPris();
@@ -32,6 +35,16 @@ public class Ordre {
         for (Pizza pizza : this.pizzaer) {
             System.out.println(pizza);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Ordre{" +
+                "pizzaer=" + pizzaer +
+                ", afhentningsTidspunkt=" + afhentningsTidspunkt +
+                ", ordreId=" + ordreId +
+                ", samletPris=" + samletPris +
+                '}';
     }
 }
 /*
