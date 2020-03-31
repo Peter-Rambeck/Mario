@@ -22,12 +22,12 @@ public class OrdreBog {
         // skriv ordre til fil(ordre);
         FileWriter fw = null;
         try {
-            fw = new FileWriter("C:\\Users\\peter\\Creative Cloud Files\\CPHB\\Assignments\\Mario\\OrdreBog\\ordrebog.csv");
+            fw = new FileWriter("OrdreBog\\ordrebog.csv",true);
         } catch (IOException e) {
             System.out.println("File dosen't exsist");;
         }
             try {
-                fw.write(ordre + lineSeparator());
+                fw.write(ordre + "\n");//lineSeparator()
             } catch (IOException e) {
                 System.out.println("Writing went wrong");
                 ;

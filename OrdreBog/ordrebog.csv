@@ -1,1 +1,2 @@
-Ordre{pizzaer=[Pizza nr=1, navn='Margaritha', ingredienser='Tomatsauce & Ost', pris=50], afhentningsTidspunkt=12:00, ordreId=2, samletPris=50}
+Ordre{pizzaer=[Pizza nr=2, navn='Amerikaner', ingredienser='Tomatsauce, ost, oksefars og oregano', pris=53, Pizza nr=3, navn='Cacciatore', ingredienser='Tomatsauce, ost, peperoni, origano', pris=57, Pizza nr=3, navn='Cacciatore', ingredienser='Tomatsauce, ost, peperoni, origano', pris=57, Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57], afhentningsTidspunkt=14:00, ordreId=1, samletPris=224}
+Ordre{pizzaer=[Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57], afhentningsTidspunkt=11:00, ordreId=1, samletPris=57}

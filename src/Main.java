@@ -1,31 +1,18 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Menukort menuKort = new Menukort();
         menuKort.indlæsMenukort();
-     /*   System.out.println(x);
-        Pizza p=new Pizza();
-        p.findIMenu(x,2);
-        System.out.println(p);*/
-     Ordre ordre=new Ordre();
-     IO.indlaesOrdre(ordre,menuKort);
+        Ordre ordre=new Ordre();
+        IO.indlaesOrdre(ordre,menuKort);
         OrdreBog ordrebog=new OrdreBog();
         ordre.tilFøjOrdre(ordrebog);
-
-        ordre.visOrdre();
-      ordre=new Ordre();
-        IO.indlaesOrdre(ordre,menuKort);
-        ordre.visOrdre();
-
-
-        ordre.tilFøjOrdre(ordrebog);
-        System.out.println(ordrebog);
-       // ordrebog.afslutOrdre(ordre);
-        System.out.println(ordrebog);
+        ordrebog.afslutOrdre(ordre);
 
     }
 }
