@@ -18,28 +18,27 @@ public class IO {
         menukort.indlæsMenukort();
         OrdreBog ordreBog = new OrdreBog();
 
-        while (valg != "x") {
+        while (!valg.equalsIgnoreCase("x") ){
 
             System.out.println(menukort);
             System.out.println(ordreBog);
 
             System.out.println("Opret ordre: tast o");
             System.out.println("Afslut ordre: tast a");
+            System.out.println("Afslut program: tast x");
 
-            // System.out.println("While");
-            if (valg.equals("o")) {
-                // System.out.println("o");
+            valg = valgInput.nextLine();
+
+             if (valg.equalsIgnoreCase("o")) {
                 Ordre ordre = new Ordre();
                 IO.indlaesOrdre(ordre, menukort);
                 ordre.tilFøjOrdre(ordreBog);
             }
-            if (valg.equals("a")) {
-                // System.out.println("a");
+            if (valg.equalsIgnoreCase("a")) {
                 Ordre ordre;
                 ordre = afslutHvilkenOrdre(ordreBog);
                 ordreBog.afslutOrdre(ordre);
             }
-            valg = valgInput.nextLine();
         }
     }
 

@@ -7,7 +7,7 @@ import java.util.Collections;
 public class Ordre implements Comparable<Ordre>{
 
     static int ordreCounter = 1;
-    static ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
+    ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
     LocalTime afhentningsTidspunkt;
     int ordreId;
     int samletPris = 0;
