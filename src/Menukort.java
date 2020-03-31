@@ -99,9 +99,18 @@ public class Menukort {
 
     @Override
     public String toString() {
-        return "Menukort{" +
-                "pizzaList=" + pizzaList +
-                '}';
+       String retString;
+       retString="Menukort Marios Pizza\n";
+       for(Pizza pizza:pizzaList){
+           retString=retString+"Nr "+pizza.getNr();
+           retString=retString+" "+pizza.getNavn()+": ";
+           retString=retString+" "+pizza.getIngredienser();
+           retString=retString+" Pris "+pizza.getPris()+" Kr";
+           retString=retString+"\n";
+
+       }
+        return retString;
+
     }
 }
 

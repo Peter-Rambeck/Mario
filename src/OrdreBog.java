@@ -27,7 +27,7 @@ public class OrdreBog {
             System.out.println("File dosen't exsist");;
         }
             try {
-                fw.write(ordre + "\n");//lineSeparator()
+                fw.write(ordre +lineSeparator() );
             } catch (IOException e) {
                 System.out.println("Writing went wrong");
                 ;

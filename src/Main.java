@@ -21,7 +21,7 @@ public class Main {
      IO.indlaesOrdre(ordre,menuKort);
         OrdreBog ordrebog=new OrdreBog();
         ordre.tilFøjOrdre(ordrebog);
-
+x
         ordre.visOrdre();
       ordre=new Ordre();
         IO.indlaesOrdre(ordre,menuKort);
