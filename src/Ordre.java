@@ -25,6 +25,7 @@ public class Ordre implements Comparable<Ordre>{
     }
     @Override
     public int compareTo(Ordre ordre) {
+
         return this.afhentningsTidspunkt.compareTo(ordre.afhentningsTidspunkt);
     }
 

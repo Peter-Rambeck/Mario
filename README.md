@@ -31,4 +31,11 @@ Onsdag:
 4. Try/Catch : Peter
 5. Kommentar : Peter
 
+Exceptions:
+Afslut ordre
+1. Hvis ordreBog er tom 
+// problem med OrdreBog:linje 22
+2. Hvis forkert ordre nr intastes, retuneres tom ordreBog
+// problem med OrdreBog:linje 57 + 58.
+
 
