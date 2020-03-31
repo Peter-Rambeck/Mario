@@ -39,6 +39,16 @@ public class OrdreBog {
 
     }
 
+    public Ordre findOrdre(int nr) {
+        for (Ordre ordre : ordreListe) {
+            if (ordre.ordreId == nr){
+                return ordre;
+            }
+        }
+        System.out.println("Ordre findes ikke! - Tast igen");
+        return null;
+    }
+
     @Override
     public String toString() {
         String retString="OrdreBog\n";

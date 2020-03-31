@@ -1,8 +1,61 @@
+import java.io.IOException;
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Scanner;
 
 public class IO {
+
+
+    public static void controller() throws IOException {
+
+        Scanner valgInput = new Scanner(System.in);
+        System.out.println("Opret ordre: tast o");
+        System.out.println("Afslut ordre: tast a");
+
+        String valg = valgInput.nextLine();
+
+        Menukort menukort = new Menukort();
+        menukort.indlæsMenukort();
+        OrdreBog ordreBog = new OrdreBog();
+
+        while (valg != "x") {
+
+            System.out.println(menukort);
+            System.out.println(ordreBog);
+
+            System.out.println("Opret ordre: tast o");
+            System.out.println("Afslut ordre: tast a");
+
+            // System.out.println("While");
+            if (valg.equals("o")) {
+                // System.out.println("o");
+                Ordre ordre = new Ordre();
+                IO.indlaesOrdre(ordre, menukort);
+                ordre.tilFøjOrdre(ordreBog);
+            }
+            if (valg.equals("a")) {
+                // System.out.println("a");
+                Ordre ordre;
+                ordre = afslutHvilkenOrdre(ordreBog);
+                ordreBog.afslutOrdre(ordre);
+            }
+            valg = valgInput.nextLine();
+        }
+    }
+
+    public static Ordre afslutHvilkenOrdre(OrdreBog ordreBog) throws IOException {
+
+        System.out.println(ordreBog);
+        Scanner afslutInput = new Scanner(System.in);
+        System.out.println("Hvilken ordre skal afsluttes. Intast ordre nr.");
+        int nr = afslutInput.nextInt();
+
+        Ordre ordre;
+        ordre = ordreBog.findOrdre(nr);
+
+        return ordre;
+    }
+
 
     public static void indlaesOrdre(Ordre ordre, Menukort menukort) {
 

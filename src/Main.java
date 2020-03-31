@@ -6,13 +6,34 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        IO.controller();
+
+
+        /*
+
         Menukort menuKort = new Menukort();
         menuKort.indlæsMenukort();
-        Ordre ordre=new Ordre();
-        IO.indlaesOrdre(ordre,menuKort);
+        System.out.println(x);
+        Pizza p=new Pizza();
+        p.findIMenu(x,2);
+        System.out.println(p);
+     Ordre ordre=new Ordre();
+     IO.indlaesOrdre(ordre,menuKort);
         OrdreBog ordrebog=new OrdreBog();
         ordre.tilFøjOrdre(ordrebog);
-        ordrebog.afslutOrdre(ordre);
+
+        ordre.visOrdre();
+      ordre=new Ordre();
+        IO.indlaesOrdre(ordre,menuKort);
+        ordre.visOrdre();
+
+
+        ordre.tilFøjOrdre(ordrebog);
+        System.out.println(ordrebog);
+       // ordrebog.afslutOrdre(ordre);
+        System.out.println(ordrebog);
+
+        */
 
     }
 }
