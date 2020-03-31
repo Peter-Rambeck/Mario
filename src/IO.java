@@ -9,10 +9,10 @@ public class IO {
     public static void controller() throws IOException {
 
         Scanner valgInput = new Scanner(System.in);
-        System.out.println("Opret ordre: tast o");
-        System.out.println("Afslut ordre: tast a");
+        // System.out.println("Opret ordre: tast o");
+        // System.out.println("Afslut ordre: tast a");
 
-        String valg = valgInput.nextLine();
+        String valg = "";
 
         Menukort menukort = new Menukort();
         menukort.indlæsMenukort();

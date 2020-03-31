@@ -23,4 +23,12 @@ Tirsdag:
 4. I/O Try/Catch
 5. Test. Junit
 
+Onsdag:  
+1. I/O Dialog og flow : Jens  
+2. Pæne ToString : Jens  
+3. Junit test x 3   
+( Pris, Remove order, Skriv til fil) : Gustav
+4. Try/Catch : Peter
+5. Kommentar : Peter
+
 

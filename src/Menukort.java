@@ -93,7 +93,7 @@ public class Menukort {
                 61);
         pizzaList.add(pizza14);
 
-        System.out.println(pizzaList);
+        // System.out.println(pizzaList);
 
     }
 
