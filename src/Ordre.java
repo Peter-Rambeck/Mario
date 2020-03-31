@@ -1,8 +1,10 @@
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Ordre {
+
+public class Ordre implements Comparable<Ordre>{
 
     static int ordreCounter = 1;
     static ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
@@ -21,12 +23,17 @@ public class Ordre {
         pizzaer.add(pizza);
         samletPris = samletPris + pizza.getPris();
     }
+    @Override
+    public int compareTo(Ordre ordre) {
+        return this.afhentningsTidspunkt.compareTo(ordre.afhentningsTidspunkt);
+    }
 
     public void tilføjKlokkeSlet(LocalTime time) {
         afhentningsTidspunkt = time;
     }
     public void tilFøjOrdre(OrdreBog ordreBog){
         ordreBog.ordreListe.add(this);
+        Collections.sort(ordreBog.ordreListe);
 
     }
 

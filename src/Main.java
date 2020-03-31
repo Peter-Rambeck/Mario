@@ -13,15 +13,18 @@ public class Main {
         System.out.println(p);*/
      Ordre ordre=new Ordre();
      IO.indlaesOrdre(ordre,menuKort);
-     ordre.visOrdre();
+        OrdreBog ordrebog=new OrdreBog();
+        ordre.tilFøjOrdre(ordrebog);
+
+        ordre.visOrdre();
       ordre=new Ordre();
         IO.indlaesOrdre(ordre,menuKort);
         ordre.visOrdre();
 
-        OrdreBog ordrebog=new OrdreBog();
+
         ordre.tilFøjOrdre(ordrebog);
         System.out.println(ordrebog);
-        ordrebog.afslutOrdre(ordre);
+       // ordrebog.afslutOrdre(ordre);
         System.out.println(ordrebog);
 
     }
