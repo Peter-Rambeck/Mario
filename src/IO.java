@@ -11,7 +11,7 @@ public class IO {
         // Create Scanner to receive user input
         Scanner valgInput = new Scanner(System.in);
 
-        // Initialize vriable
+        // Initialize variable
         String valg = "";
 
         // Create new Menu object
