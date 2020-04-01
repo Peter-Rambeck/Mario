@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-abstract class OrdreTest {
+class OrdreTest {
 
 
 
@@ -12,13 +12,14 @@ abstract class OrdreTest {
 
 
     @Test
-    void tilføjPizza() {
+    public void tilføjPizza() {
+        //tester om samlet pris på ordren er rigtig 45
         testordre.tilføjPizza(pizza1);
         assertEquals(45,testordre.samletPris);
+        //tester om samlet pris på ordren er rigtig 45+55
         testordre.tilføjPizza(pizza2);
         assertEquals(100,testordre.samletPris);
 
-        //fail();
     }
 
     @Test
