@@ -11,6 +11,7 @@ public class Main {
         /*
 
         Menukort menuKort = new Menukort();
+
         menuKort.indlæsMenukort();
         System.out.println(x);
         Pizza p=new Pizza();
