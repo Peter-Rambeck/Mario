@@ -1,6 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;o
+import java.util.Scanner;
 
 public class Main {
 
