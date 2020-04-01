@@ -4,9 +4,11 @@ public class Menukort {
 
     public static ArrayList<Pizza> pizzaList = new ArrayList<Pizza>();
 
+    // Menukort contructor
     public Menukort() {
     }
 
+    // Read in new Pizzaer to a Menukort list
     public void indlæsMenukort() {
 
         Pizza pizza1 = new Pizza(1,
@@ -92,9 +94,6 @@ public class Menukort {
                 "Tomatsauce, ost, pepperoni, bacon, løg og oregano",
                 61);
         pizzaList.add(pizza14);
-
-        // System.out.println(pizzaList);
-
     }
 
     @Override
@@ -107,35 +106,7 @@ public class Menukort {
            retString=retString+" "+pizza.getIngredienser();
            retString=retString+" Pris "+pizza.getPris()+" Kr";
            retString=retString+"\n";
-
        }
         return retString;
-
     }
 }
-
-
-    /*
-    static ArrayList<Pizza> pizzaList;
-
-    public Menukort(ArrayList<Pizza> pizzaList) {
-        Menukort.pizzaList = pizzaList;
-    }
-
-    public static ArrayList<Pizza> getPizzaList() {
-        return pizzaList;
-    }
-
-    public void setPizzaList(ArrayList<Pizza> pizzaList) {
-        Menukort.pizzaList = pizzaList;
-    }
-
-    @Override
-    public String toString() {
-        String str;
-        str = "Menukort: " + "\n";
-        for (Pizza pizza: pizzaList) {
-            str = str + pizza + "\n";
-        }
-        return str;     */
-

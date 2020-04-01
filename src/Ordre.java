@@ -23,21 +23,25 @@ public class Ordre implements Comparable<Ordre>{
         pizzaer.add(pizza);
         samletPris = samletPris + pizza.getPris();
     }
+
+    // Sort Orderlist by pickup time.
     @Override
     public int compareTo(Ordre ordre) {
-
         return this.afhentningsTidspunkt.compareTo(ordre.afhentningsTidspunkt);
     }
 
+    // Method to add Pickup time in right format
     public void tilføjKlokkeSlet(LocalTime time) {
         afhentningsTidspunkt = time;
     }
+
+    // Method to add order to orderlist and sort output.
     public void tilFøjOrdre(OrdreBog ordreBog){
         ordreBog.ordreListe.add(this);
         Collections.sort(ordreBog.ordreListe);
-
     }
 
+    // Display full order with Pizzas and pickup time.
     public void visOrdre() {
         System.out.println("ordrenummer: " + this.ordreId+"  Klokken:"+this.afhentningsTidspunkt+" pris:"+this.samletPris);
         for (Pizza pizza : this.pizzaer) {
@@ -55,46 +59,3 @@ public class Ordre implements Comparable<Ordre>{
                 '}';
     }
 }
-/*
-
-
-
-    static int ordreCounter = 1;
-    ArrayList<Pizza> pizzaer;
-    Time afhentningsTidspunkt;
-    int ordreId;
-
-    // New variable
-    int pris;
-
-    public Ordre (ArrayList<Pizza> pizzaer, Time afhentningsTidspunkt) {
-        this.afhentningsTidspunkt = afhentningsTidspunkt;
-        this.ordreId = ordreCounter;
-        ordreCounter++;
-
-//        for (Pizza arrayList : this.pizzaer = pizzaer) {
-
-        }
-
-
- visOrdrePris skal udregne ordre prisen
-
-public void setPris() {
-    int tmpPris = 0;
-    // TODO: Calculate orderprice
-    // tmpPris = pizza.getPris();
-    // tmpPris =
-}
-
-    public int visOrdrePris() {
-        int pris = 0;
-        return pris;
-    }
-
-
-  visOrdre skal udskrive den fulde ordre: getPizzaer + afhentningsTidspunkt + pris
-
-    public void visOrdre() {
-    }
-
- */
