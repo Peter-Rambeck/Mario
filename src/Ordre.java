@@ -45,7 +45,6 @@ public class Ordre implements Comparable<Ordre>{
         }
     }
 
-
     @Override
     public String toString() {
         return "Ordre{" +

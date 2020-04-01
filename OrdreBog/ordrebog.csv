@@ -2,3 +2,6 @@ Ordre{pizzaer=[Pizza nr=1, navn='Margaritha', ingredienser='Tomatsauce & Ost', p
 Ordre{pizzaer=[Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57, Pizza nr=2, navn='Amerikaner', ingredienser='Tomatsauce, ost, oksefars og oregano', pris=53], afhentningsTidspunkt=12:30, ordreId=1, samletPris=110}
 Ordre{pizzaer=[Pizza nr=5, navn='Dennis', ingredienser='Tomatsauce, ost, skinke pepperoni, cocktailpølser og oregano', pris=65], afhentningsTidspunkt=03:00, ordreId=1, samletPris=65}
 Ordre{pizzaer=[Pizza nr=14, navn='Mafia', ingredienser='Tomatsauce, ost, pepperoni, bacon, løg og oregano', pris=61], afhentningsTidspunkt=14:40, ordreId=1, samletPris=61}
+Ordre{pizzaer=[Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57], afhentningsTidspunkt=12:00, ordreId=1, samletPris=57}
+Ordre{pizzaer=[Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57], afhentningsTidspunkt=12:00, ordreId=1, samletPris=57}
+Ordre{pizzaer=[Pizza nr=1, navn='Vesuvio', ingredienser='Tomatsauce, ost, skinke og oregano', pris=57], afhentningsTidspunkt=12:00, ordreId=1, samletPris=57}

@@ -46,19 +46,8 @@ public class OrdreBog {
         for (Ordre ordre : ordreListe) {
             if (ordre.ordreId == nr){
                 return ordre;
-
-            } if (ordreListe == null) {
-                System.out.println("Ordre findes ikke! - Tast igen");
-                return null;
-            }
-
-                else {
-                System.out.println("Ordre findes ikke! - Tast igen");
-                OrdreBog ordreBog = new OrdreBog();
-                IO.afslutHvilkenOrdre(ordreBog);
             }
         }
-
         return null;
     }
 
@@ -77,3 +66,4 @@ public class OrdreBog {
         return retString;
     }
 }
+
