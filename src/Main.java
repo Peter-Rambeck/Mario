@@ -8,7 +8,6 @@ public class Main {
 
         IO.controller();
 
-
         /*
 
         Menukort menuKort = new Menukort();

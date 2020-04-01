@@ -25,6 +25,7 @@ public class Ordre implements Comparable<Ordre>{
     }
     @Override
     public int compareTo(Ordre ordre) {
+
         return this.afhentningsTidspunkt.compareTo(ordre.afhentningsTidspunkt);
     }
 
@@ -43,7 +44,6 @@ public class Ordre implements Comparable<Ordre>{
             System.out.println(pizza);
         }
     }
-
 
     @Override
     public String toString() {

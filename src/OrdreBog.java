@@ -13,11 +13,14 @@ public class OrdreBog {
     int dagensOmsætning = 0;
 
     public OrdreBog(){
+
         ordreListe = new ArrayList<Ordre>();
     }
 
     public void afslutOrdre(Ordre ordre) throws IOException {
-        dagensOmsætning=dagensOmsætning+ordre.samletPris;
+
+        dagensOmsætning = dagensOmsætning + ordre.samletPris;
+
 
         // skriv ordre til fil(ordre);
         FileWriter fw = null;
@@ -30,7 +33,6 @@ public class OrdreBog {
                 fw.write(ordre +lineSeparator() );
             } catch (IOException e) {
                 System.out.println("Writing went wrong");
-                ;
             }
         fw.flush();
         fw.close();
@@ -39,13 +41,13 @@ public class OrdreBog {
 
     }
 
-    public Ordre findOrdre(int nr) {
+    public Ordre findOrdre(int nr) throws IOException {
+
         for (Ordre ordre : ordreListe) {
             if (ordre.ordreId == nr){
                 return ordre;
             }
         }
-        System.out.println("Ordre findes ikke! - Tast igen");
         return null;
     }
 
@@ -64,3 +66,4 @@ public class OrdreBog {
         return retString;
     }
 }
+
