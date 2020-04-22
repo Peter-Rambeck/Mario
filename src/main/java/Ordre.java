@@ -1,4 +1,5 @@
-import java.sql.Time;
+import model.Pizza;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +19,7 @@ public class Ordre implements Comparable<Ordre>{
         ordreCounter++;
     }
 
-    // Add Pizza order to ArrayList + sum the price variable
+    // Add model.Pizza order to ArrayList + sum the price variable
     public void tilføjPizza(Pizza pizza) {
         pizzaer.add(pizza);
         samletPris = samletPris + pizza.getPris();

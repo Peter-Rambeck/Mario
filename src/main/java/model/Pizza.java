@@ -1,4 +1,4 @@
-
+package model;
 
 public class Pizza {
 
@@ -71,7 +71,7 @@ public class Pizza {
     public String toString() {
 
 
-        return "Pizza " +
+        return "model.Pizza " +
                 "nr=" + nr +
                 ", navn='" + navn + '\'' +
                 ", ingredienser='" + ingredienser + '\'' +

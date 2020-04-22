@@ -4,15 +4,15 @@ Mario's Pizzabar
 Mandag 30.03.20.  
 Status:  
 Oprettet   
-1. Pizza
-2. Menukort
+1. model.Pizza
+2. model.Menukort
 3. I/O Ordredialog
 4. Ordre
 5. Ordrebog
 
 TODO:  
 1. Skrive til fil : Peter
-2. Kommentar : Peter ( - Menukort & Ordrebog )
+2. Kommentar : Peter ( - model.Menukort & Ordrebog )
 3. Opdatere menukort : Gustav
 4. Vis ordrebog : Jens
 

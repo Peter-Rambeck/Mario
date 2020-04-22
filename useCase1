@@ -10,7 +10,7 @@ Preconditioning:    Dell-Laptop is functional
                     Phone is working
 
 Basic flow of events:
-1.  Customer makes an order of Pizza(s) from the menu.
+1.  Customer makes an order of model.Pizza(s) from the menu.
 	(List pizza numbers in the system, comma separated.)
 2.  Customer adds a pickup time to the order.
 3.  Order and pickup time is registered in the system.
@@ -18,8 +18,8 @@ Basic flow of events:
 
 
 Alternative flows:
-1.  Pizza is not available.
-    1.a.    System prompt: Pizza is not available, pls chose an alternative.
+1.  model.Pizza is not available.
+    1.a.    System prompt: model.Pizza is not available, pls chose an alternative.
 2.  Pickup time is set to before/earlier than the time of the order
     2.a.    System prompt: Pls set pickup time to now + 20min.
 

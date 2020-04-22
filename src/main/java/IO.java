@@ -1,3 +1,6 @@
+import model.Menukort;
+import model.Pizza;
+
 import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
@@ -41,7 +44,7 @@ public class IO {
                 // Create a new empty order
                 Ordre ordre = new Ordre();
                 // Call order method to take input
-                IO.indlaesOrdre(ordre, menukort);
+                indlaesOrdre(ordre, menukort);
                 // Add the final order to the order log
                 ordre.tilFøjOrdre(ordreBog);
             }
@@ -89,18 +92,18 @@ public class IO {
         return ordre;
     }
 
-    // Method to take user input for Pizza order
+    // Method to take user input for model.Pizza order
     public static void indlaesOrdre(Ordre ordre, Menukort menukort) {
 
         // Create Scanner
         Scanner ordreInput = new Scanner(System.in);
 
-        // First variable in an order: Pizza('s)
+        // First variable in an order: model.Pizza('s)
         System.out.println("Vælg pizza nr? \nAfslut ordre med 0");
 
         // Test if user input is an int
         if (ordreInput.hasNextInt()) {
-            // Store user input for Pizza nr.
+            // Store user input for model.Pizza nr.
             int valg = ordreInput.nextInt();
 
             // Catch if user input is within menu range
@@ -114,20 +117,21 @@ public class IO {
                     catch (IOException e) {
                         System.out.println("Pizzaen findes ikke\nVælg mellem 1 - 14");
                         indlaesOrdre(ordre, menukort);
+                        return;
                     }
                 }
 
-                // Instantiate a Pizza object
+                // Instantiate a model.Pizza object
                 Pizza tmpPizza = new Pizza();
                 // Based on user input.
-                // lockup and initialize the Pizza object with pizza from the menu.
+                // lockup and initialize the model.Pizza object with pizza from the menu.
                 tmpPizza.findIMenu(menukort, valg);
                 // Add the initialized pizza to an order
                 ordre.tilføjPizza(tmpPizza);
                 // Continue While-Loop
                 valg = ordreInput.nextInt();
-            }
 
+            }
         // Catch if user input in NOT an int, with return to new user input
         } else {
             System.out.println("Fejl. Indtast et tal mellem 1 - 14");
