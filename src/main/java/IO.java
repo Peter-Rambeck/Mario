@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.sql.Time;
 import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
@@ -75,7 +74,7 @@ public class IO {
 
         // Initialize int variable
         int nr = 0;
-        // Test id user inpyt is an int
+        // Test id user input is an int
         if (afslutInput.hasNextInt()) {
             nr = afslutInput.nextInt();
             // Catch if user input is not an int
