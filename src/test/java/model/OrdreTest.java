@@ -1,7 +1,11 @@
+package model;
+
 import model.Pizza;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import model.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OrdreTest {
 
@@ -14,14 +18,13 @@ class OrdreTest {
 
     @Test
     public void tilføjPizza() {
-        //tester om samlet pris på ordren er rigtig 45
+      //tester om samlet pris på ordren er rigtig 45
         testordre.tilføjPizza(pizza1);
         assertEquals(45,testordre.samletPris);
         //tester om samlet pris på ordren er rigtig 45+55
         testordre.tilføjPizza(pizza2);
         assertEquals(100,testordre.samletPris);
-
-    }
+}
 
     @Test
     void tilFøjOrdre() {

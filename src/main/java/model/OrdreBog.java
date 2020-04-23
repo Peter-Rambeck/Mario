@@ -1,11 +1,11 @@
-import model.Pizza;
+package model;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import static java.lang.System.lineSeparator;
-
+import DataMapper.*;
 
 public class OrdreBog {
     //Ordrebogen indeholder en liste af ordrer og dagens omsætning
@@ -23,9 +23,9 @@ public class OrdreBog {
         dagensOmsætning = dagensOmsætning + ordre.samletPris;
 
         // skriv ordre til fil(ordre);
-        FileWriter fw = null;
+        /*FileWriter fw = null;
         try {
-            fw = new FileWriter("OrdreBog\\ordrebog.csv",true);
+            fw = new FileWriter("model.OrdreBog\\ordrebog.csv",true);
         } catch (IOException e) {
             System.out.println("File dosen't exsist");;
         }
@@ -35,7 +35,9 @@ public class OrdreBog {
                 System.out.println("Writing went wrong");
             }
         fw.flush();
-        fw.close();
+        fw.close();*/
+        OrdreMapper om=new OrdreMapper();
+        om.afslutOrdre(ordre);
         ordreListe.remove(ordre);
     }
 
@@ -54,7 +56,7 @@ public class OrdreBog {
 
     @Override
     public String toString() {
-        String retString="OrdreBog\n";
+        String retString="model.OrdreBog\n";
 
         for(Ordre ordre:this.ordreListe){
             retString=retString+"Odrenr: "+ordre.ordreId+" Klokken: "+ordre.afhentningsTidspunkt+" Pizzaer: ";

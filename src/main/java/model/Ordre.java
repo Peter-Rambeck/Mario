@@ -1,5 +1,6 @@
-import model.Pizza;
+package model;
 
+import java.sql.Time;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,16 +8,33 @@ import java.util.Collections;
 
 public class Ordre implements Comparable<Ordre>{
 
-    static int ordreCounter = 1;
+   // static int ordreCounter = 1;
+
+    public ArrayList<Pizza> getPizzaer() {
+        return pizzaer;
+    }
+
     ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
+
+    public LocalTime getAfhentningsTidspunkt() {
+        return afhentningsTidspunkt;
+    }
+
     LocalTime afhentningsTidspunkt;
     int ordreId;
     int samletPris = 0;
 
+    public void setOrdreId(int ordreId) {
+        this.ordreId = ordreId;
+    }
+
+    public int getOrdreId() {
+        return ordreId;
+    }
+
     // Constructor
     public Ordre() {
-        ordreId = ordreCounter;
-        ordreCounter++;
+        ordreId = 0;
     }
 
     // Add model.Pizza order to ArrayList + sum the price variable
@@ -52,7 +70,7 @@ public class Ordre implements Comparable<Ordre>{
 
     @Override
     public String toString() {
-        return "Ordre{" +
+        return "model.Ordre{" +
                 "pizzaer=" + pizzaer +
                 ", afhentningsTidspunkt=" + afhentningsTidspunkt +
                 ", ordreId=" + ordreId +

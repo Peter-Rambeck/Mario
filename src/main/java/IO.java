@@ -1,4 +1,7 @@
+import DataMapper.OrdreMapper;
 import model.Menukort;
+import model.Ordre;
+import model.OrdreBog;
 import model.Pizza;
 
 import java.io.IOException;
@@ -22,6 +25,8 @@ public class IO {
         menukort.indlæsMenukort();
         // Create new order log
         OrdreBog ordreBog = new OrdreBog();
+        OrdreMapper om=new OrdreMapper();
+        om.indlaesAabneOrdrer(ordreBog);
 
         // Correct for wrong or random user input
         while (!valg.equalsIgnoreCase("x")) {
@@ -138,6 +143,11 @@ public class IO {
             indlaesOrdre(ordre, menukort);
         }
         indlæsTidspunkt(ordre);
+
+        OrdreMapper om=new OrdreMapper();
+        int orderID=om.createOrdre(ordre);
+        ordre.setOrdreId(orderID);
+
     }
 
     // Method to get Second variable in an order, the pickup time
