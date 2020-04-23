@@ -95,23 +95,28 @@ public class OrdreMapper {
         // TODO: The JDBC-cycle
         Connection conn = DBConnector.getInstance().getConnection();
         try {
-            query = "SELECT * FROM ordre WHERE aaben=1";
+            query = "SELECT * FROM ordre WHERE aaben=1;";
             Statement stmt = conn.createStatement();
-            ResultSet res = stmt.executeQuery(query);
-            while(res.next()) {
-                // laver en ordre per iteration og gemmer i listen
-               int ordreID=res.getInt("OrdreID");
-               Date dato=res.getDate("dato");
-               Time afhentningsTidspunkt = res.getTime("afhentningstidspunkt");
+            ResultSet resOrdre = stmt.executeQuery(query);
+            while(resOrdre.next()) {
+                // laver en ordre per iteration og gemmer i ordrebog
+               int ordreID=resOrdre.getInt("OrdreID");
+               //Date dato=res.getDate("Dato");
+               Time afhentningsTidspunkt = resOrdre.getTime("afhentningstidspunkt");
                tmpOrdre = new Ordre();
                tmpOrdre.setOrdreId(ordreID);
+
                tmpOrdre.tilføjKlokkeSlet(afhentningsTidspunkt.toLocalTime());
-                try {
-                    query = "SELECT * FROM ordrepizza WHERE ordreID="+tmpOrdre.getOrdreId();
+               try {
+                    stmt = conn.createStatement();
+                   query = "SELECT * FROM ordrepizza WHERE ordreID="+tmpOrdre.getOrdreId()+";";
+                    ResultSet res = stmt.executeQuery(query);
+
 
                     while(res.next()) {
                         // laver en ordre per iteration og gemmer i listen
-                        int pizzaID=res.getInt("pizzaID");
+                        int pizzaID=res.getInt("PizzaID");
+
                         Pizza tmpPizza=new Pizza();
                         Menukort menu=new Menukort();
                         tmpPizza.findIMenu(menu,pizzaID);
@@ -127,22 +132,7 @@ public class OrdreMapper {
             System.out.println(e.getMessage());
         }
 
-        try {
-            query = "SELECT * FROM ordrepizza WHERE ordreID="+tmpOrdre.getOrdreId();
-            Statement stmt = conn.createStatement();
-            ResultSet res = stmt.executeQuery(query);
-            while(res.next()) {
-                // laver en ordre per iteration og gemmer i listen
-                int pizzaID=res.getInt("pizzaID");
-                Pizza tmpPizza=new Pizza();
-                Menukort menu=new Menukort();
-                tmpPizza.findIMenu(menu,pizzaID);
-                tmpOrdre.tilføjPizza(tmpPizza);
 
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
 
 
 
