@@ -12,7 +12,7 @@ public class DBConnector {
         try {
             String baseurl = "jdbc:mysql://localhost:3306/";
             String db = "Mario";
-            String timeZ = "serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            String timeZ = "serverTimezone=Europe/Copenhagen&allowPublicKeyRetrieval=true";
             String totalUrl = baseurl+db+"?"+timeZ;
             String user = "root";
             String password = "Data2020";
