@@ -16,17 +16,21 @@ public class OrdreMapper {
         int ordreID = 0;
         String sqlQuery = "";
         Connection conn = DBConnector.getInstance().getConnection();
-
+        // ordre oprettes med dato som dags dato
         LocalDate dato = LocalDate.now();
         LocalTime afhentningstidspunkt = ordre.getAfhentningsTidspunkt();
+        // ordren er åben
         int aaben=1;
 
+        //laver ny ordre..
         sqlQuery = "Insert into ordre (dato,afhentningstidspunkt,aaben) " +
                 "Values(\"" + dato + "\",\"" + afhentningstidspunkt + "\",\""+ aaben + "\")";
         // lave statement
         try {
             Statement stmt = conn.createStatement();
+            //opret i DB
             stmt.executeUpdate(sqlQuery, Statement.RETURN_GENERATED_KEYS);
+            // modtag ordreID fr DB
             ResultSet res = stmt.getGeneratedKeys();
             res.next();
             ordreID = res.getInt(1);
@@ -34,10 +38,12 @@ public class OrdreMapper {
             System.out.println(e.getMessage());
         }
 
-
         /* læg pizzaer og ordre i sammenføjningstabel*/
+        // hent pizzaer fr ordre over i arraylist
         ArrayList<Pizza> pizzaer = new ArrayList<>();
         pizzaer = ordre.getPizzaer();
+
+        // for alle pizzaer i listen tilføjes pizzaID og OrdreID til sammenføjningstabel
         for (int j = 0; j < pizzaer.size(); j++) {
             sqlQuery = "Insert into ordrepizza (ordreID,pizzaID) " +
                     "Values(\"" + ordreID + "\",\"" + pizzaer.get(j).getNr() + "\")";
@@ -51,48 +57,31 @@ public class OrdreMapper {
             }
 
         }
+        //returner ordre i fra DB
         return ordreID;
     }
 
     public void afslutOrdre(Ordre ordre){
+        // Afslut ordre ændrer kun staus fra åben til lukket
         String sqlQuery = "";
         Connection conn = DBConnector.getInstance().getConnection();
-
-        /*
-        UPDATE table_name
-            SET column1 = value1, column2 = value2, ...
-               WHERE condition;
-         */
-
-
-
-
         int aaben=0;
-
         sqlQuery = "UPDATE ordre SET aaben =0 WHERE ordreID="+ordre.getOrdreId();
 
         // lave statement
         try {
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(sqlQuery);
-
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
-
-
-
-
-
     }
 
     public void indlaesAabneOrdrer(OrdreBog ordreBog) {
         String query = "";
         Ordre tmpOrdre = null;
         ArrayList<Ordre> ordrer = new ArrayList<>();
-        // TODO: The JDBC-cycle
+        //  The JDBC-cycle
         Connection conn = DBConnector.getInstance().getConnection();
         try {
             query = "SELECT * FROM ordre WHERE aaben=1;";
@@ -132,16 +121,5 @@ public class OrdreMapper {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
-
-
-
-
-
-
     }
-
-
-
-
 }
