@@ -103,6 +103,7 @@ public class OrdreMapper {
                int ordreID=resOrdre.getInt("OrdreID");
                //Date dato=res.getDate("Dato");
                Time afhentningsTidspunkt = resOrdre.getTime("afhentningstidspunkt");
+               System.out.println(afhentningsTidspunkt);
                tmpOrdre = new Ordre();
                tmpOrdre.setOrdreId(ordreID);
 
