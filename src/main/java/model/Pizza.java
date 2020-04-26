@@ -17,6 +17,7 @@ public class Pizza {
         this.pris = pris;
     }
     public Pizza() {
+        nr=-1;
            }
     public int getNr() {
 

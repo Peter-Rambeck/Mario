@@ -90,23 +90,18 @@ public class OrdreMapper {
             while(resOrdre.next()) {
                 // laver en ordre per iteration og gemmer i ordrebog
                int ordreID=resOrdre.getInt("OrdreID");
-               //Date dato=res.getDate("Dato");
                Time afhentningsTidspunkt = resOrdre.getTime("afhentningstidspunkt");
-               System.out.println(afhentningsTidspunkt);
                tmpOrdre = new Ordre();
                tmpOrdre.setOrdreId(ordreID);
-
                tmpOrdre.tilføjKlokkeSlet(afhentningsTidspunkt.toLocalTime());
-               try {
+
+               try {//find pizzaer i ordrepizza hvor ordrID er den fundne
                     stmt = conn.createStatement();
-                   query = "SELECT * FROM ordrepizza WHERE ordreID="+tmpOrdre.getOrdreId()+";";
+                    query = "SELECT * FROM ordrepizza WHERE ordreID="+tmpOrdre.getOrdreId()+";";
                     ResultSet res = stmt.executeQuery(query);
-
-
                     while(res.next()) {
                         // laver en ordre per iteration og gemmer i listen
                         int pizzaID=res.getInt("PizzaID");
-
                         Pizza tmpPizza=new Pizza();
                         Menukort menu=new Menukort();
                         tmpPizza.findIMenu(menu,pizzaID);

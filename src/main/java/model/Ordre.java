@@ -8,21 +8,21 @@ import java.util.Collections;
 
 public class Ordre implements Comparable<Ordre>{
 
-   // static int ordreCounter = 1;
+    LocalTime afhentningsTidspunkt;
+    int ordreId;
+    int samletPris = 0;
+    ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
+
 
     public ArrayList<Pizza> getPizzaer() {
         return pizzaer;
     }
 
-    ArrayList<Pizza> pizzaer=new ArrayList<Pizza>();
 
     public LocalTime getAfhentningsTidspunkt() {
         return afhentningsTidspunkt;
     }
 
-    LocalTime afhentningsTidspunkt;
-    int ordreId;
-    int samletPris = 0;
 
     public void setOrdreId(int ordreId) {
         this.ordreId = ordreId;
@@ -34,7 +34,7 @@ public class Ordre implements Comparable<Ordre>{
 
     // Constructor
     public Ordre() {
-        ordreId = 0;
+        samletPris = 0;
     }
 
     // Add model.Pizza order to ArrayList + sum the price variable

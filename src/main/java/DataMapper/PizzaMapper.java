@@ -19,7 +19,7 @@ public class PizzaMapper {
             Statement stmt = conn.createStatement();
             ResultSet res = stmt.executeQuery(query);
             while(res.next()) {
-                // laver en cykel per iteration og gemmer i listen
+                // laver en pizza per iteration og gemmer i listen
                 int id = res.getInt("PizzaID");
                 String navn = res.getString("navn");
                 String ingredienser = res.getString("ingredienser");

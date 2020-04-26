@@ -26,7 +26,7 @@ public class Menukort {
     @Override
     public String toString() {
        String retString;
-       retString="model.Menukort Marios model.Pizza\n";
+       retString="Menukort Marios \n";
        for(Pizza pizza:pizzaList){
            retString=retString+"Nr "+pizza.getNr();
            retString=retString+" "+pizza.getNavn()+": ";

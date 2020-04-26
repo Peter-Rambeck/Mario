@@ -17,31 +17,19 @@ public class OrdreBog {
         ordreListe = new ArrayList<Ordre>();
     }
 
-    public void afslutOrdre(Ordre ordre) throws IOException {
+    public void afslutOrdre(Ordre ordre) {
 
         // læg ordrens pris til dagens omsætning
         dagensOmsætning = dagensOmsætning + ordre.samletPris;
 
-        // skriv ordre til fil(ordre);
-        /*FileWriter fw = null;
-        try {
-            fw = new FileWriter("model.OrdreBog\\ordrebog.csv",true);
-        } catch (IOException e) {
-            System.out.println("File dosen't exsist");;
-        }
-            try {
-                fw.write(ordre +lineSeparator() );
-            } catch (IOException e) {
-                System.out.println("Writing went wrong");
-            }
-        fw.flush();
-        fw.close();*/
+        //afslut ordren i DB
         OrdreMapper om=new OrdreMapper();
         om.afslutOrdre(ordre);
+        //fjern ordre fra ordrebogen
         ordreListe.remove(ordre);
     }
 
-    public Ordre findOrdre(int nr) throws IOException {
+    public Ordre findOrdre(int nr) /*throws IOException*/ {
         //find ordre i ordrebog vha ordrenr
         // gennemløb ordrelisten
         for (Ordre ordre : ordreListe) {
@@ -50,19 +38,21 @@ public class OrdreBog {
                 return ordre;
             }
         }
-        //returner null hvis ordrnr ikke findes i rdrebog
+        //returner null hvis ordrnr ikke findes i ordrebog
         return null;
     }
 
     @Override
     public String toString() {
-        String retString="model.OrdreBog\n";
+        String retString="OrdreBog\n";
 
         for(Ordre ordre:this.ordreListe){
             retString=retString+"Odrenr: "+ordre.ordreId+" Klokken: "+ordre.afhentningsTidspunkt+" Pizzaer: ";
             for(Pizza pizza:ordre.pizzaer){
                 retString=(retString+pizza.getNr()+", ");
             }
+            // fjern sidste komma
+            retString=retString.substring(0,retString.length()-2);
             retString=(retString+" pris: "+ordre.samletPris+"\n");
 
         }

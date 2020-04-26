@@ -99,51 +99,48 @@ public class IO {
 
     // Method to take user input for model.Pizza order
     public static void indlaesOrdre(Ordre ordre, Menukort menukort) {
-
+        String st;
         // Create Scanner
         Scanner ordreInput = new Scanner(System.in);
 
         // First variable in an order: model.Pizza('s)
         System.out.println("Vælg pizza nr? \nAfslut ordre med 0");
 
+        // gør klar til ny pizza
+        Pizza tmpPizza;
         // Test if user input is an int
-        if (ordreInput.hasNextInt()) {
-            // Store user input for model.Pizza nr.
-            int valg = ordreInput.nextInt();
 
-            // Catch if user input is within menu range
-            while (valg > 0) {
-                // Test if user input is out of boundaries, menu has 14 pizza's
-                if (valg > 14) {
-                    try {
-                        throw new IOException();
+
+            int valg=100;
+            // sålænge valg ikke er 0...
+            while (valg != 0) {
+                // hvis næste indtastning er tal
+                if (ordreInput.hasNextInt()) {
+                    tmpPizza=new Pizza();
+                    // læs tal
+                    valg = ordreInput.nextInt();
+                    //find piza i menu
+                    tmpPizza.findIMenu(menukort, valg);
+                    // Test if pizza is found in menu
+                    if (tmpPizza.getNr()== valg) {
+                        // tilføj funden pizza til ordre
+                        ordre.tilføjPizza(tmpPizza);
+                    } else {
+                        if (valg>0) {
+                            // pizza var ikke i menuen
+                            System.out.println("Fejl. Indtast en pizza fra menuen");
+                        }
                     }
-                    // If user input is out of range, return to new input
-                    catch (IOException e) {
-                        System.out.println("Pizzaen findes ikke\nVælg mellem 1 - 14");
-                        indlaesOrdre(ordre, menukort);
-                        return;
-                    }
+                } else {
+                    // der blev ikke indtatstet et tal
+                    System.out.println("Fejl. Indtast en pizza fra menuen");
+                    //læs det indtastede
+                    st=ordreInput.nextLine();
+                    st=ordreInput.nextLine();
                 }
-
-                // Instantiate a model.Pizza object
-                Pizza tmpPizza = new Pizza();
-                // Based on user input.
-                // lockup and initialize the model.Pizza object with pizza from the menu.
-                tmpPizza.findIMenu(menukort, valg);
-                // Add the initialized pizza to an order
-                ordre.tilføjPizza(tmpPizza);
-                // Continue While-Loop
-                valg = ordreInput.nextInt();
-
             }
-        // Catch if user input in NOT an int, with return to new user input
-        } else {
-            System.out.println("Fejl. Indtast et tal mellem 1 - 14");
-            indlaesOrdre(ordre, menukort);
-        }
         indlæsTidspunkt(ordre);
-
+        // gem ordre i DB
         OrdreMapper om=new OrdreMapper();
         int orderID=om.createOrdre(ordre);
         ordre.setOrdreId(orderID);
