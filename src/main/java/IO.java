@@ -41,6 +41,9 @@ public class IO {
             System.out.println("Afslut ordre: tast a");
             System.out.println("Afslut program: tast x");
 
+            // Create new Pizza
+            System.out.println("Lav ny Pizza: tast p");
+
             // Store user input
             valg = valgInput.nextLine();
 
@@ -53,6 +56,12 @@ public class IO {
                 // Add the final order to the order log
                 ordre.tilFøjOrdre(ordreBog);
             }
+            if (valg.equalsIgnoreCase("p")) {
+                IOnewPizza newPizza = new IOnewPizza();
+                newPizza.indlaesNyPizza();
+            }
+
+
             // Correct for wrong or random user input
             if (valg.equalsIgnoreCase("a")) {
                 // Instantiate a non-existing order case
